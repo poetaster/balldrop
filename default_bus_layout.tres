@@ -59,4 +59,3 @@ bus/2/effect/2/effect = SubResource( 5 )
 bus/2/effect/2/enabled = true
 bus/2/effect/3/effect = SubResource( 6 )
 bus/2/effect/3/enabled = true
-

@@ -8,28 +8,114 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Reference",
+"class": "InputEventMultiScreenDrag",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventMultiScreenDrag.gd"
+}, {
+"base": "Reference",
+"class": "InputEventMultiScreenLongPress",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventMultiScreenLongPress.gd"
+}, {
+"base": "Reference",
+"class": "InputEventMultiScreenSwipe",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventMultiScreenSwipe.gd"
+}, {
+"base": "Reference",
+"class": "InputEventMultiScreenTap",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventMultiScreenTap.gd"
+}, {
+"base": "Reference",
+"class": "InputEventScreenPinch",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventScreenPinch.gd"
+}, {
+"base": "Reference",
+"class": "InputEventScreenTwist",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventScreenTwist.gd"
+}, {
+"base": "Reference",
+"class": "InputEventSingleScreenDrag",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventSingleScreenDrag.gd"
+}, {
+"base": "Reference",
+"class": "InputEventSingleScreenLongPress",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventSingleScreenLongPress.gd"
+}, {
+"base": "Reference",
+"class": "InputEventSingleScreenSwipe",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventSingleScreenSwipe.gd"
+}, {
+"base": "Reference",
+"class": "InputEventSingleScreenTap",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventSingleScreenTap.gd"
+}, {
+"base": "Reference",
+"class": "InputEventSingleScreenTouch",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/CustomInputEvents/InputEventSingleScreenTouch.gd"
+}, {
+"base": "InputEventAction",
+"class": "RawGesture",
+"language": "GDScript",
+"path": "res://plugins/GodotTouchInputManager/RawGesture.gd"
+} ]
 _global_script_class_icons={
-
+"InputEventMultiScreenDrag": "",
+"InputEventMultiScreenLongPress": "",
+"InputEventMultiScreenSwipe": "",
+"InputEventMultiScreenTap": "",
+"InputEventScreenPinch": "",
+"InputEventScreenTwist": "",
+"InputEventSingleScreenDrag": "",
+"InputEventSingleScreenLongPress": "",
+"InputEventSingleScreenSwipe": "",
+"InputEventSingleScreenTap": "",
+"InputEventSingleScreenTouch": "",
+"RawGesture": ""
 }
 
 [application]
 
-config/name="balldrop."
+config/name="balldrop"
 run/main_scene="res://main.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="harbour-balldrop"
 config/icon="res://icon.png"
 
 [autoload]
 
 AudioPlayer="*res://global_audioplayer.gd"
+InputManager="*res://plugins/GodotTouchInputManager/InputManager.gd"
 
 [display]
 
-window/size/width=1280
-window/size/height=720
-window/size/fullscreen=true
+window/size/width=144
+window/size/height=256
+window/size/test_width=288
+window/size/test_height=512
+window/handheld/orientation="portrait"
+
+[global]
+
+name=false
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
-quality/filters/msaa=3
+quality/driver/driver_name="GLES2"
+quality/driver/fallback_to_gles2=true
+quality/depth_prepass/enable=false
 environment/default_environment="res://default_env.tres"

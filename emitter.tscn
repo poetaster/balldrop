@@ -14,8 +14,7 @@ sound = "bell"
 autostart = true
 
 [node name="spr" type="Sprite" parent="."]
-modulate = Color( 0.183594, 0.183594, 0.183594, 1 )
+modulate = Color( 0, 0, 0, 1 )
 material = SubResource( 1 )
 texture = ExtResource( 2 )
-
 [connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]

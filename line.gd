@@ -25,8 +25,18 @@ func set_ends(p1, p2):
 
 
 func _on_line_input_event(viewport, event, shape_idx):
-	
 	# delete line when right clicked
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == BUTTON_RIGHT:
 			queue_free()
+	elif event is InputEventSingleScreenSwipe:
+		if not event.pressed:
+			queue_free()
+	pass
+
+func _remove():
+	queue_free()
+	pass
+	
+		
+		

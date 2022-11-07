@@ -80,5 +80,3 @@ func _physics_process(delta):
 			shockwave.position = position
 			shockwave.modulate = $spr.modulate
 			get_parent().add_child(shockwave)
-			
-			

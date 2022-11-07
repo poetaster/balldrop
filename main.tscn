@@ -103,18 +103,19 @@ position = Vector2( 640, 360 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="vsplit" type="VSplitContainer" parent="center"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 426.0
-margin_top = 168.0
-margin_right = 853.0
-margin_bottom = 552.0
+margin_right = 599.0
+margin_bottom = 384.0
 mouse_filter = 2
 dragger_visibility = 2
 
 [node name="logo" type="Label" parent="center/vsplit"]
-margin_right = 427.0
+margin_right = 599.0
 margin_bottom = 177.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -124,13 +125,13 @@ valign = 1
 
 [node name="controls" type="Label" parent="center/vsplit"]
 margin_top = 177.0
-margin_right = 427.0
+margin_right = 599.0
 margin_bottom = 384.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "
-draw lines: left mouse button
-erase lines: right mouse button"
+draw lines: quick tap origin,  hold complete 
+erase lines: multi-finger swipe"
 align = 1
 valign = 1
 
@@ -147,4 +148,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 color = Color( 0.184314, 0.0901961, 0.0901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 14.4123
+margin_top = 189.895
+margin_right = 110.412
+margin_bottom = 217.895
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 12.6843
+margin_top = 211.368
+margin_right = 77.6843
+margin_bottom = 228.368
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

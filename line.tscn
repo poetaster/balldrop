@@ -18,5 +18,4 @@ shape = SubResource( 1 )
 [node name="spr" type="Sprite" parent="."]
 modulate = Color( 1.2, 1.2, 1.2, 1 )
 texture = ExtResource( 2 )
-
 [connection signal="input_event" from="." to="." method="_on_line_input_event"]
