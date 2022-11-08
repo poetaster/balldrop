@@ -25,32 +25,37 @@ func gen_notes():
 	var notes = []
 	
 	#seed(hash(angle+1))
-	seed(3) # seed = 2 is nice
+	seed(4) # seed = 2 is nice
+	randomize()
 	randi()
 	
 	var base_pitch = 0.06#rand_range(0.05, 0.2)
 	# print(base_pitch)
 		
-	var note1 = randi() % 12
-	var note2 = randi() % 12
-	var note3 = randi() % 12
-	
+	var note1 = 1 #randi() % 12
+	var note2 = 3 #randi() % 12
+	var note3 = 5 #randi() % 12
+	var note4 = int(rand_range(7,9))
+	#print(note4)
 	notes.push_back(2 * base_pitch)
 	notes.push_back(pow(2, 1 + note1/12.0) * base_pitch)
 	notes.push_back(pow(2, 1 + note2/12.0) * base_pitch)
 	notes.push_back(pow(2, 1 + note3/12.0) * base_pitch)
+	notes.push_back(pow(2, 1 + note4/12.0) * base_pitch)
 	
 	for i in 100:
 		var n1 = notes[-1]
 		var n2 = notes[-2]
 		var n3 = notes[-3]
-		var n4 = notes[-4]		
+		var n4 = notes[-4]
+		var n5 = notes[-5]
 		
 		notes.push_back(n1 * 2)
 		notes.push_back(n2 * 2)
 		notes.push_back(n3 * 2)
-		notes.push_back(n4 * 2)	
+		notes.push_back(n4 * 2)
+		notes.push_back(n5 * 2)
 		
 	randomize()
-		
+	#print(notes)
 	return notes
