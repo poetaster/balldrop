@@ -109,8 +109,9 @@ __meta__ = {
 
 [node name="vsplit" type="VSplitContainer" parent="center"]
 modulate = Color( 1, 1, 1, 0 )
+margin_top = 29.0
 margin_right = 599.0
-margin_bottom = 384.0
+margin_bottom = 483.0
 mouse_filter = 2
 dragger_visibility = 2
 
@@ -126,12 +127,13 @@ valign = 1
 [node name="controls" type="Label" parent="center/vsplit"]
 margin_top = 177.0
 margin_right = 599.0
-margin_bottom = 384.0
+margin_bottom = 454.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "
 draw lines: quick tap origin,  hold complete 
-erase lines: multi-finger swipe"
+erase lines: multi-finger tap
+change scale: multi-finger drag"
 align = 1
 valign = 1
 

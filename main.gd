@@ -3,6 +3,8 @@ extends Node
 onready var label = $Label
 onready var label2 = $Label2
 
+signal scalechange
+
 var current_line = null
 var p1 = Vector2()
 var p2 = p1
@@ -63,7 +65,7 @@ func _input(event):
 	# the initial point for our line
 	if event is InputEventSingleScreenTap:
 		if not event.pressed: 
-			#var center = get_main_node().get_node("ball_container")
+			#var center = utils.get_main_node().get_node("ball_container")
 			# this is the same as event.position, sadly.
 			#p1 = $cam.get_canvas_transform().affine_inverse().xform(event.position)
 			p1 = event.position
@@ -77,7 +79,7 @@ func _input(event):
 	# the end point of our line created here
 	if event is InputEventSingleScreenLongPress:
 		if not event.pressed:
-			#var center = get_main_node().get_node("ball_container")
+			#var center = utils.get_main_node().get_node("ball_container")
 			#p2 = $cam.get_canvas_transform().affine_inverse().xform(event.position)
 			p2 = event.position
 			if p2[0] < 1:
@@ -97,22 +99,17 @@ func _input(event):
 				if _i.get_class() == 'StaticBody2D':
 					_i._remove()
 					
-	if event is InputEventMultiScreenDrag:
-			label2.text = "Multi finger swipe"
+	if event is InputEventMultiScreenTap:
+			label2.text = "Multi finger tap"
 			for _i in self.get_children ():
 				if _i.get_class() == 'StaticBody2D':
 					_i._remove()
-				
-#	if event is InputEventMouseButton:
-#		if event.pressed and event.button_index == BUTTON_LEFT:
-#			p1 = last_mouse_pos
-#			p2 = p1
-#			current_line = preload("res://line.tscn").instance()
-#			current_line.set_ends(p1, p2)
-#			add_child(current_line)
-#		else:
-#			current_line = null
+	
+	if event is InputEventMultiScreenDrag:
+		label2.text = "Multi finger drag"
+		emit_signal("scalechange")
+		label.text = event.as_text().replace('|','\n')
+	if Input.is_action_pressed("ui_right"):
+		emit_signal("scalechange")
 
-func get_main_node():
-		var root_node = get_tree().get_root()
-		return root_node.get_child(root_node.get_child_count()-1)
+
