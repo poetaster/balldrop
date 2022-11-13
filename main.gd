@@ -95,9 +95,9 @@ func _input(event):
 	if event is InputEventSingleScreenSwipe:
 		if not event.pressed:
 			label2.text = "Single finger swipe"
-			for _i in self.get_children ():
-				if _i.get_class() == 'StaticBody2D':
-					_i._remove()
+			#for _i in self.get_children ():
+			#	if _i.get_class() == 'StaticBody2D':
+			#		_i._remove()
 					
 	if event is InputEventMultiScreenTap:
 			label2.text = "Multi finger tap"

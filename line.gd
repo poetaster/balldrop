@@ -22,15 +22,16 @@ func set_ends(p1, p2):
 	$spr.scale = Vector2(a.distance_to(b), 1)
 	
 	
-
+func _input(event):
+	if event is InputEventSingleScreenSwipe:
+		print('line swipe')
+		if not event.pressed:
+			queue_free()
 
 func _on_line_input_event(viewport, event, shape_idx):
 	# delete line when right clicked
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == BUTTON_RIGHT:
-			queue_free()
-	elif event is InputEventSingleScreenSwipe:
-		if not event.pressed:
 			queue_free()
 	pass
 

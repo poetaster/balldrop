@@ -75,10 +75,10 @@ func gen_scale(scl):
 	var n1 = 1 + scl #randi() % 12
 	var n2 = 3 + scl #randi() % 12
 	var n3 = 5 + scl #randi() % 12
-	var n4 = int(rand_range(7+scl,10))
+	var n4 = 8 #int(rand_range(7+scl,12))
 
 	var scale = [n1,n2,n3,n4]
-	print(scale)
+	#print(scale)
 	return scale
 
 

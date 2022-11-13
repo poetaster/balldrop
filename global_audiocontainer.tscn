@@ -13,15 +13,14 @@ bus = "Bell"
 
 [node name="player_kick" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
-volume_db = 10.571
+volume_db = 4.466
 bus = "Reverb"
 
 [node name="player_snare" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
-volume_db = 5.0
 bus = "Reverb"
 
 [node name="player_laser" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
-volume_db = -6.0
+volume_db = -3.0
 bus = "Reverb"
